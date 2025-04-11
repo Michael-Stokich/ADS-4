@@ -15,7 +15,6 @@ int countPairs2(int *arr, int len, int value) {
   int lt = 0;
   int rt = len - 1;
   int ct = 0;
-  std::sort(arr, arr + len);
   while (lt < rt) {
     int sum = arr[lt] + arr[rt];
     if (sum == value) {
@@ -34,7 +33,6 @@ int countPairs2(int *arr, int len, int value) {
 
 int countPairs3(int *arr, int len, int value) {
   int ct = 0;
-  std:sort(arr, arr + len);
   for (int i = 0; i < len; i++) {
     int tg = value - arr[i];
     int lt = i + 1;
