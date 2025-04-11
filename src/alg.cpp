@@ -5,6 +5,8 @@ int countPairs1(int *arr, int len, int value) {
         for (int j = i + 1; j < len; j++) {
             if (arr[i] + arr[j] == value) {
                 count++;
+            } else if (arr[i] + arr[j] > value) {
+                break;
             }
         }
     }
@@ -74,9 +76,11 @@ int countPairs3(int *arr, int len, int value) {
                 right = mid - 1;
             }
         }
+
         if (first <= last) {
             count += last - first + 1;
         }
     }
+
     return count;
 }
