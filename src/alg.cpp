@@ -30,7 +30,7 @@ int countPairs2(int *arr, int len, int value) {
 }
 int countPairs3(int *arr, int len, int value) {
   int ct = 0;
-  for (i = 0 i < len; i++) {
+  for (int i = 0; i < len; i++) {
     int tg = value - arr[i];
     int lt = i + 1;
     int rt = len - 1;
@@ -46,5 +46,5 @@ int countPairs3(int *arr, int len, int value) {
       }
     }
   }
-  return count;
+  return ct;
 }
